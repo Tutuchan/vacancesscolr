@@ -23,7 +23,7 @@ MIT license.
 
 ## Examples
 
-Check if a date is a holiday.
+Check if a date is a holiday:
 
 ``` r
 is_holiday("2018-03-05")
@@ -35,7 +35,7 @@ is_holiday("2018-03-05", zone = "B")
 ```
 
 Retrieve all holidays for a year, optional zone and optional type of
-holiday.
+holiday:
 
 ``` r
 get_year_holidays(2018, name = "Vacances d'hiver")
@@ -101,4 +101,16 @@ get_year_holidays(2018, name = "Vacances d'hiver")
 #> 28 Vacances d'hiver
 #> 29 Vacances d'hiver
 #> 30 Vacances d'hiver
+```
+
+You can use shortened names for the holidays names:
+
+``` r
+full_holidays_names()
+#> [1] "Vacances de Noël"         "Vacances d'hiver"        
+#> [3] "Vacances de printemps"    "Vacances d'été"          
+#> [5] "Vacances de la Toussaint"
+
+short_holidays_names()
+#> [1] "noel"      "hiver"     "printemps" "été"       "toussaint"
 ```
