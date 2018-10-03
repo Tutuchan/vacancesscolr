@@ -112,5 +112,5 @@ full_holidays_names()
 #> [5] "Vacances de la Toussaint"
 
 short_holidays_names()
-#> [1] "noel"      "hiver"     "printemps" "été"       "toussaint"
+#> [1] "noel"      "hiver"     "printemps" "ete"       "toussaint"
 ```
