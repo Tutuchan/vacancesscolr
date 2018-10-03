@@ -1,0 +1,55 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(vacancesscolr)
+```
+
+# vacancesscolr
+
+The goal of `vacancesscolr` is to be able to quickly retrieve school holidays in France for the 2008-2018 period.
+
+The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under MIT license.
+
+## Installation
+
+`vacancesscolr` lives only on Github for now. Please use `devtools` or `remotes` to install it.
+
+``` r
+# devtools::install_github("tutuchan/vacancesscolr")
+# remotes::install_github("tutuchan/vacancesscolr")
+```
+
+## Examples
+
+Check if a date is a holiday:
+
+```{r check}
+is_holiday("2018-03-05")
+is_holiday("2018-03-05", zone = "A")
+is_holiday("2018-03-05", zone = "B")
+```
+
+Retrieve all holidays for a year, optional zone and optional type of holiday:
+
+```{r year}
+get_year_holidays(2018, name = "Vacances d'hiver")
+```
+
+You can use shortened names for the holidays names:
+
+```{r names}
+full_holidays_names()
+
+short_holidays_names()
+```
+
