@@ -1,6 +1,6 @@
 Package: vacancesscolr
 Title: Find school holidays in France
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Pierre", "Formont", email = "pierre.formont@gmail.com", role = c("aut", "cre")),
     person("Antoine", "Augusti", role = "cph", comment= "School holiday dataset")

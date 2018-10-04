@@ -43,12 +43,12 @@ assert_year <- function(x) {
 #'
 #' @keywords internal
 assert_name <- function(x) {
-  if (!x %in% c(.holidays_names, .short_holidays_names)) {
-    stop("Valid holiday names are: ", toString(.holidays_names), " or ", toString(.short_holidays_names))
+  if (!x %in% c(.holidays_names, .holidays_names_short)) {
+    stop("Valid holiday names are: ", toString(.holidays_names), " or ", toString(.holidays_names_short))
   }
 
-  if (tolower(x) %in% .short_holidays_names) {
-    idx <- which(.short_holidays_names == tolower(x))
+  if (tolower(x) %in% .holidays_names_short) {
+    idx <- which(.holidays_names_short == tolower(x))
     x   <- .holidays_names[idx]
   }
   x
