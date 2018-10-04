@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  github_document:
+    df_print: "tibble"
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -16,9 +18,11 @@ library(vacancesscolr)
 
 # vacancesscolr
 
-The goal of `vacancesscolr` is to be able to quickly retrieve school holidays in France for the 2008-2018 period.
+The goal of `vacancesscolr` is to be able to quickly retrieve school holidays in France for the 2008-2018 period and bank holidays for any given year.
 
-The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under MIT license.
+The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under MIT license. 
+
+The functionalities are direct ports from his [vacances-scolaires-france](https://github.com/AntoineAugusti/vacances-scolaires-france) and [jours-feries-france](https://github.com/AntoineAugusti/jours-feries-france) Python packages.
 
 ## Installation
 
@@ -30,6 +34,10 @@ The data used in this package has been obtained from [Antoine Augusti's vacances
 ```
 
 ## Examples
+
+**Please note that data.frames are printed as `tibble`s in this README for clarity but they are simple `data.frame`s in R.**
+
+### Holidays
 
 Check if a date is a holiday:
 
@@ -48,8 +56,36 @@ get_year_holidays(2018, name = "Vacances d'hiver")
 You can use shortened names for the holidays names:
 
 ```{r names}
-full_holidays_names()
+holidays_names_full()
 
-short_holidays_names()
+holidays_names_short()
+```
+
+### Bank holidays
+
+Get all bank holidays for a year:
+
+```{r bank holidays}
+get_year_bank_holidays(2018)
+```
+
+Get a specific bank holiday:
+
+```{r specific bank holiday}
+bh_lundi_paques(2018)
+```
+
+Get the names of bank holidays (some have multiple ways to call them):
+
+```{r bank holidays names}
+bank_holiday_names()
+
+bank_holiday_names_unique()
+```
+
+Get a bank holiday knowing its name:
+
+```{r bank holiday}
+bank_holiday("1 mai")(2018)
 ```
 
