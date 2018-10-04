@@ -29,8 +29,8 @@ test_that("assert_name is viable", {
     expect_equal(assert_name(name), name)
   }
 
-  for (name in .short_holidays_names) {
-    idx <- which(.short_holidays_names == name)
+  for (name in .holidays_names_short) {
+    idx <- which(.holidays_names_short == name)
     expect_equal(assert_name(name), .holidays_names[idx])
   }
 
