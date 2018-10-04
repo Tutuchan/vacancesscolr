@@ -18,7 +18,7 @@ library(vacancesscolr)
 
 The goal of `vacancesscolr` is to be able to quickly retrieve school holidays in France for the 2008-2018 period.
 
-The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under MIT license.
+The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under the Etalab license (open license).
 
 ## Installation
 
