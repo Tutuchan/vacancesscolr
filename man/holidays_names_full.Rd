@@ -3,17 +3,11 @@
 \name{holidays_names_full}
 \alias{holidays_names_full}
 \alias{holidays_names_short}
-\alias{bank_holiday_names}
-\alias{bank_holiday_names_unique}
 \title{available holidays names}
 \usage{
 holidays_names_full()
 
 holidays_names_short()
-
-bank_holiday_names()
-
-bank_holiday_names_unique()
 }
 \description{
 available holidays names

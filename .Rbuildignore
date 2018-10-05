@@ -3,3 +3,5 @@
 ^LICENSE\.md$
 man-roxygen
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$

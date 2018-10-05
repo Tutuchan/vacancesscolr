@@ -7,7 +7,7 @@
 bank_holiday(type)
 }
 \arguments{
-\item{type}{one of the type of bank holidays, see \code{\link[=bank_holiday_names]{bank_holiday_names()}}}
+\item{type}{one of the type of bank holidays, see \code{\link[=bank_holidays_names]{bank_holidays_names()}}}
 }
 \description{
 Note this function returns a function with a \code{year} parameter.

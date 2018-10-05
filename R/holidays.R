@@ -108,7 +108,7 @@ days_until_holidays <- function(zone = NULL, quiet = FALSE){
 #' are we on holidays somewhere in France?
 #' Check for your zone using the `zone` param.
 #'
-#' @inheritParams days_till_holidays
+#' @inheritParams days_until_holidays
 #'
 #' @return a logical, TRUE if we are on holidays, FALSE otherwise.
 #' @export

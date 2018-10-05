@@ -1,0 +1,22 @@
+template:
+  params:
+    bootswatch: yeti
+url: https://tutuchan.github.io/vacancesscolr
+reference:
+- title: Holidays
+  desc: ~
+  contents:
+  - '`get_year_holidays`'
+  - '`is_holiday`'
+  - '`days_until_holidays`'
+  - '`is_it_holidays`'
+  - '`next_holidays`'
+  - '`holidays_names_full`'
+- title: Bank holidays
+  desc: ~
+  contents:
+  - '`get_year_bank_holidays`'
+  - '`is_bank_holiday`'
+  - '`bank_holidays`'
+  - '`bank_holiday`'
+  - '`bank_holidays_names`'

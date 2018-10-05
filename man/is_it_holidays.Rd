@@ -6,6 +6,11 @@
 \usage{
 is_it_holidays(zone = NULL, quiet = FALSE)
 }
+\arguments{
+\item{zone}{a character, either "A", "B" or "C"}
+
+\item{quiet}{whether or not to return a message}
+}
 \value{
 a logical, TRUE if we are on holidays, FALSE otherwise.
 }

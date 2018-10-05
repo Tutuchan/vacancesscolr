@@ -14,7 +14,7 @@ get_year_bank_holidays <- function(year, include_alsace = FALSE) {
     stop("'year' must be a numeric of length 1!")
   }
 
-  bhn <- bank_holiday_names_unique()
+  bhn <- bank_holidays_names_unique()
   if (!include_alsace) {
     bhn <- bhn[bhn != c("vendredi_saint", "saint_etienne")]
   }
@@ -35,7 +35,7 @@ get_year_bank_holidays <- function(year, include_alsace = FALSE) {
 #'
 #' Note this function returns a function with a `year` parameter.
 #'
-#' @param type one of the type of bank holidays, see [bank_holiday_names()]
+#' @param type one of the type of bank holidays, see [bank_holidays_names()]
 #'
 #' @export
 bank_holiday <- function(type) {
