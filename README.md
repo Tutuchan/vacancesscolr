@@ -3,6 +3,9 @@
 
 # vacancesscolr
 
+[![Travis build
+status](https://travis-ci.org/Tutuchan/vacancesscolr.svg?branch=master)](https://travis-ci.org/Tutuchan/vacancesscolr)
+
 The goal of `vacancesscolr` is to be able to quickly retrieve school
 holidays in France for the 2008-2018 period and bank holidays for any
 given year.

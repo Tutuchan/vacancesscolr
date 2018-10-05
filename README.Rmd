@@ -18,6 +18,8 @@ library(vacancesscolr)
 
 # vacancesscolr
 
+[![Travis build status](https://travis-ci.org/Tutuchan/vacancesscolr.svg?branch=master)](https://travis-ci.org/Tutuchan/vacancesscolr)
+
 The goal of `vacancesscolr` is to be able to quickly retrieve school holidays in France for the 2008-2018 period and bank holidays for any given year.
 
 The data used in this package has been obtained from [Antoine Augusti's vacances-scolaires dataset](https://github.com/AntoineAugusti/vacances-scolaires), under the Etalab license (open license).
