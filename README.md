@@ -50,7 +50,7 @@ Retrieve all holidays for a year, optional zone and optional type of
 holiday:
 
 ``` r
-get_year_holidays(2018, name = "Vacances d'hiver")
+get_holidays(2018, name = "Vacances d'hiver")
 #>          date vacances_zone_a vacances_zone_b vacances_zone_c
 #> 1  2018-02-10            TRUE           FALSE           FALSE
 #> 2  2018-02-11            TRUE           FALSE           FALSE
@@ -132,7 +132,7 @@ holidays_names_short()
 Get all bank holidays for a year:
 
 ``` r
-get_year_bank_holidays(2018)
+get_bank_holidays(2018)
 #>               type       date
 #> 5          jour_an 2018-01-01
 #> 1           paques 2018-04-01

@@ -22,30 +22,30 @@ test_that("is_holiday returns the desired value and format", {
 
 })
 
-test_that("get_year_holidays returns the desired format", {
+test_that("get_holidays returns the desired format", {
 
-  expect_is(get_year_holidays(2018), "data.frame")
+  expect_is(get_holidays(2018), "data.frame")
   expect_named(
-    get_year_holidays(2018),
+    get_holidays(2018),
     c("date", "vacances_zone_a", "vacances_zone_b", "vacances_zone_c", "nom_vacances")
   )
 })
 
 test_that("drop_zone is taken into account", {
   expect_named(
-    get_year_holidays(2018, zone = "C"),
+    get_holidays(2018, zone = "C"),
     c("date", "vacances_zone_a", "vacances_zone_b", "vacances_zone_c", "nom_vacances")
   )
 
   expect_named(
-    get_year_holidays(2018, zone = "C", drop_zones = TRUE),
+    get_holidays(2018, zone = "C", drop_zones = TRUE),
     c("date", "vacances_zone_c", "nom_vacances")
   )
 })
 
 test_that("short names work properly", {
   expect_equal(
-    unique(get_year_holidays(2018, name = "hiver")$nom_vacances),
+    unique(get_holidays(2018, name = "hiver")$nom_vacances),
     "Vacances d'hiver"
   )
 })

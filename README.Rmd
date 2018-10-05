@@ -50,7 +50,7 @@ is_holiday("2018-03-05", zone = "B")
 Retrieve all holidays for a year, optional zone and optional type of holiday:
 
 ```{r year}
-get_year_holidays(2018, name = "Vacances d'hiver")
+get_holidays(2018, name = "Vacances d'hiver")
 ```
 
 You can use shortened names for the holidays names:
@@ -66,7 +66,7 @@ holidays_names_short()
 Get all bank holidays for a year:
 
 ```{r bank holidays}
-get_year_bank_holidays(2018)
+get_bank_holidays(2018)
 ```
 
 Get a specific bank holiday:

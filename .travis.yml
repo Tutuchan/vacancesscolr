@@ -4,7 +4,7 @@ language: R
 sudo: false
 cache: packages
 
-before_deploy: Rscript -e 'devtools::install_github("r-lib/pkgdown")'
+before_deploy: Rscript -e 'if (!"pkgdown" %in% row.names(installed.packages())) devtools::install_github("r-lib/pkgdown")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github()'

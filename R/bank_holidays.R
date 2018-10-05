@@ -8,7 +8,7 @@
 #'
 #' @encoding UTF-8
 #' @export
-get_year_bank_holidays <- function(year, include_alsace = FALSE) {
+get_bank_holidays <- function(year, include_alsace = FALSE) {
 
   if (!is.numeric(year) | length(year) > 1) {
     stop("'year' must be a numeric of length 1!")
@@ -77,7 +77,7 @@ is_bank_holiday <- function(d) {
   assert_date(d)
   d    <- as.Date(d)
   year <- as.numeric(strftime(d, format = "%Y"))
-  bh   <- get_year_bank_holidays(year = year)
+  bh   <- get_bank_holidays(year = year)
 
   d %in% bh$date
 }

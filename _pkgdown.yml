@@ -6,7 +6,7 @@ reference:
 - title: Holidays
   desc: ~
   contents:
-  - '`get_year_holidays`'
+  - '`get_holidays`'
   - '`is_holiday`'
   - '`days_until_holidays`'
   - '`is_it_holidays`'
@@ -15,7 +15,7 @@ reference:
 - title: Bank holidays
   desc: ~
   contents:
-  - '`get_year_bank_holidays`'
+  - '`get_bank_holidays`'
   - '`is_bank_holiday`'
   - '`bank_holidays`'
   - '`bank_holiday`'

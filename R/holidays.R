@@ -25,7 +25,7 @@ is_holiday <- function(d, zone = NULL) {
 #' @param drop_zones a logical, if TRUE and `zone` is not NULL, return only the specified zones
 #'
 #' @export
-get_year_holidays <- function(year, zone = NULL, name = NULL, drop_zones = FALSE) {
+get_holidays <- function(year, zone = NULL, name = NULL, drop_zones = FALSE) {
 
   assert_year(year)
   # Year subset
@@ -70,7 +70,7 @@ globalVariables("nom_vacances")
 #' @examples
 #' next_holidays(zone = "C")
 next_holidays <- function(zone = NULL){
-  res <- get_year_holidays(format(Sys.Date(), "%Y"), zone = zone)
+  res <- get_holidays(format(Sys.Date(), "%Y"), zone = zone)
   res <- res[res$date > Sys.Date(), ]
   res[1, ]
 }
