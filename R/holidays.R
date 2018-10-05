@@ -17,7 +17,7 @@ is_holiday <- function(d, zone = NULL) {
 
 #' get all holidays for a year
 #'
-#' Note that you can use short names instead of full names (see [full_holidays_names()])
+#' Note that you can use short names instead of full names (see [holidays_names_full()])
 #'
 #' @param year a vector of integers between 2008 and 2018
 #' @template zone
@@ -122,7 +122,7 @@ is_it_holidays <- function(zone = NULL, quiet = FALSE){
     if (is_it){
       cat("Yes it is \\o/", "\n")
     } else {
-      cat("No it's not ¯\\_(ツ)_/¯")
+      cat("No it's not :(")
     }
     invisible(is_it)
   } else {

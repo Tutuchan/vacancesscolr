@@ -16,5 +16,5 @@ get_year_holidays(year, zone = NULL, name = NULL, drop_zones = FALSE)
 \item{drop_zones}{a logical, if TRUE and \code{zone} is not NULL, return only the specified zones}
 }
 \description{
-Note that you can use short names instead of full names (see \code{\link[=full_holidays_names]{full_holidays_names()}})
+Note that you can use short names instead of full names (see \code{\link[=holidays_names_full]{holidays_names_full()}})
 }
