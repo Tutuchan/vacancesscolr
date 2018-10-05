@@ -2,7 +2,7 @@
 % Please edit documentation in R/holidays.R
 \name{next_holidays}
 \alias{next_holidays}
-\title{When will we be on holidays?}
+\title{when will we be on holidays?}
 \usage{
 next_holidays(zone = NULL)
 }
@@ -13,7 +13,7 @@ next_holidays(zone = NULL)
 The date of the next holidays
 }
 \description{
-When will we be on in France?
+When will we be on holidays in France?
 Check for your zone using the \code{zone} param.
 }
 \examples{
