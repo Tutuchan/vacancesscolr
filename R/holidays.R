@@ -57,3 +57,73 @@ get_year_holidays <- function(year, zone = NULL, name = NULL, drop_zones = FALSE
 
 globalVariables("nom_vacances")
 
+#' When will we be on holidays?
+#'
+#' When will we be on in France? 
+#' Check for your zone using the `zone` param. 
+#' 
+#' @inheritParams is_holiday
+#'
+#' @return The date of the next holidays
+#' @export
+#'
+#' @examples
+#' next_holidays(zone = "C")
+next_holidays <- function(zone = NULL){
+  res <- get_year_holidays( format(Sys.Date(), "%Y") )
+  res <- res[res$date > Sys.Date(), ]
+  res[1, ]
+}
+
+#' How many days till the next holidays?
+#' 
+#' How many days till the next in France? 
+#' Check for your zone using the `zone` param. 
+#'
+#' @inheritParams is_holiday
+#' @param quiet wether or not to return a message
+#'
+#' @return The number of days before the next holidays
+#' @export
+#'
+#' @examples
+#' days_till_holidays()
+days_till_holidays <- function(zone = NULL, quiet = FALSE){
+  res <- next_holidays(zone)
+  days <- difftime(res$date, Sys.Date())
+  if (! quiet) {
+    cat("Still", days, "days before the next holidays:", res$nom_vacances, "start on", as.character(res$date), "!\n")
+    invisible(as.numeric(days))
+  } else {
+    as.numeric(days)
+  }
+  
+}
+
+
+#' Are we on holidays? 
+#' 
+#' Are we on holidays somewhere in France? 
+#' Check for your zone using the `zone` param. 
+#'
+#' @inheritParams days_till_holidays
+#'
+#' @return Wether or not we are on holidays. 
+#' @export
+#'
+#' @examples
+#' is_it_holidays()
+is_it_holidays <- function(zone = NULL, quiet = FALSE){
+  res <- get_year_holidays( format(Sys.Date(), "%Y") )
+  is_it <- Sys.Date() %in% res$date
+  if (!quiet){
+    if (is_it){
+      cat("Yes it is \\o/", "\n")
+    } else {
+      cat("No it's not ¯\\_(ツ)_/¯")
+    }
+    invisible(is_it)
+  } else {
+    is_it
+  }
+}
