@@ -2,20 +2,15 @@
 % Please edit documentation in R/holidays.R
 \name{is_it_holidays}
 \alias{is_it_holidays}
-\title{Are we on holidays?}
+\title{are we on holidays?}
 \usage{
 is_it_holidays(zone = NULL, quiet = FALSE)
 }
-\arguments{
-\item{zone}{a character, either "A", "B" or "C"}
-
-\item{quiet}{wether or not to return a message}
-}
 \value{
-Wether or not we are on holidays.
+a logical, TRUE if we are on holidays, FALSE otherwise.
 }
 \description{
-Are we on holidays somewhere in France?
+are we on holidays somewhere in France?
 Check for your zone using the \code{zone} param.
 }
 \examples{
