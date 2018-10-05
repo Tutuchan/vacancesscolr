@@ -3,7 +3,8 @@ Title: Find school holidays in France
 Version: 0.1.1
 Authors@R: c(
     person("Pierre", "Formont", email = "pierre.formont@gmail.com", role = c("aut", "cre")),
-    person("Antoine", "Augusti", role = "cph", comment= "School holiday dataset")
+    person("Antoine", "Augusti", role = c("cph", "ctb"), comment = "School holiday dataset"),
+    person("Colin", "Fay", role = "ctb")
     )
 Description: Find out if a date is a school holiday or retrieve all school holidays 
     for a given year in France for 2008-2018.
