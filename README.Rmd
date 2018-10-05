@@ -1,7 +1,6 @@
 ---
 output: 
-  github_document:
-    df_print: "tibble"
+  github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -37,8 +36,6 @@ The functionalities are direct ports from his [vacances-scolaires-france](https:
 ```
 
 ## Examples
-
-**Please note that data.frames are printed as `tibble`s in this README for clarity but they are simple `data.frame`s in R.**
 
 ### Holidays
 
@@ -81,9 +78,9 @@ bh_lundi_paques(2018)
 Get the names of bank holidays (some have multiple ways to call them):
 
 ```{r bank holidays names}
-bank_holiday_names()
+bank_holidays_names()
 
-bank_holiday_names_unique()
+bank_holidays_names_unique()
 ```
 
 Get a bank holiday knowing its name:

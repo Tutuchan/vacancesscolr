@@ -116,8 +116,7 @@ days_until_holidays <- function(zone = NULL, quiet = FALSE){
 #' @examples
 #' is_it_holidays()
 is_it_holidays <- function(zone = NULL, quiet = FALSE){
-  res <- get_year_holidays(format(Sys.Date(), "%Y"), zone = zone)
-  is_it <- Sys.Date() %in% res$date
+  is_it <- is_holiday(Sys.Date(), zone = zone)
   if (!quiet){
     if (is_it){
       cat("Yes it is \\o/", "\n")
