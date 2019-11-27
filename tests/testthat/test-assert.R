@@ -18,7 +18,7 @@ test_that("assert_year is viable", {
   expect_true(assert_year(2010))
   expect_true(assert_year("2015"))
 
-  expect_error(assert_year(1990))
+  expect_error(assert_year(1985))
   expect_error(assert_year("asdf"))
   expect_error(assert_year(FALSE))
 })
