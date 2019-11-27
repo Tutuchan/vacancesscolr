@@ -27,8 +27,9 @@ Python packages, under MIT license.
 `remotes` to install it.
 
 ``` r
-# devtools::install_github("tutuchan/vacancesscolr")
-# remotes::install_github("tutuchan/vacancesscolr")
+devtools::install_github("tutuchan/vacancesscolr")
+# OR
+remotes::install_github("tutuchan/vacancesscolr")
 ```
 
 ## Examples

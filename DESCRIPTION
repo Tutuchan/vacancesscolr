@@ -1,13 +1,13 @@
 Package: vacancesscolr
 Title: Find school holidays in France
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person("Pierre", "Formont", email = "pierre.formont@gmail.com", role = c("aut", "cre")),
     person("Antoine", "Augusti", role = c("cph", "ctb"), comment = "School holiday dataset"),
     person("Colin", "Fay", role = "ctb")
     )
 Description: Find out if a date is a school holiday or retrieve all school holidays 
-    for a given year in France for 2008-2018.
+    for a given year in France for 1990-2021.
 Depends: R (>= 3.4.0)
 Roxygen: list(markdown = TRUE)
 License: MIT + file LICENSE

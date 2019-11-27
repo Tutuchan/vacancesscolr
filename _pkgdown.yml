@@ -1,7 +1,6 @@
 template:
   params:
     bootswatch: yeti
-url: https://tutuchan.github.io/vacancesscolr
 reference:
 - title: Holidays
   desc: ~

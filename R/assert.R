@@ -30,8 +30,11 @@ assert_year <- function(x) {
     stop(x, " is not a year!")
   }
 
-  if (any(res < 2008) | any(res > 2018)) {
-    stop("All elements of '", toString(x), "' should be between 2008 and 2018!")
+  min_year <- as.numeric(substring(min(vacances$date), 1, 4))
+  max_year <- as.numeric(substring(max(vacances$date), 1, 4))
+
+  if (any(res < min_year) | any(res > max_year)) {
+    stop("All elements of '", toString(x), "' should be between ", min_year, " and ", max_year, "!")
   }
 
   TRUE
